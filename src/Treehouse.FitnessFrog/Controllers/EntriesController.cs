@@ -55,7 +55,6 @@ namespace Treehouse.FitnessFrog.Controllers
         [HttpPost]
         public ActionResult Add(Entry entry)
         {
-            ModelState.AddModelError("", "Some fields were not completed properly! Please, fix the errors to proceed.");
 
             // If aren't any duration field validation errors, check if duration is greater than 0
             if (ModelState.IsValidField("Duration") && entry.Duration <= 0)
